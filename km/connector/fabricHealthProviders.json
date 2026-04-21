@@ -97,11 +97,6 @@
             },
             {
                 "type": "JSON",
-                "header": "Headshot URL",
-                "path": "headshotUrl"
-            },
-            {
-                "type": "JSON",
                 "header": "Location IDs",
                 "path": "locationIds"
             },
@@ -235,17 +230,6 @@
             "field": "description",
             "header": "Bio",
             "subfieldPath": []
-        },
-        {
-            "clearValueIfBlank": false,
-            "dropInvalidMapping": false,
-            "field": "headshot",
-            "header": "Headshot URL",
-            "subfieldPath": [
-                {
-                    "name": "url"
-                }
-            ]
         },
         {
             "clearValueIfBlank": false,

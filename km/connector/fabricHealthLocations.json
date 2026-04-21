@@ -270,7 +270,7 @@
         {
             "clearValueIfBlank": false,
             "dropInvalidMapping": false,
-            "field": "geocodedCoordinate",
+            "field": "displayCoordinate",
             "header": "Latitude",
             "subfieldPath": [
                 {
@@ -281,7 +281,7 @@
         {
             "clearValueIfBlank": false,
             "dropInvalidMapping": false,
-            "field": "geocodedCoordinate",
+            "field": "displayCoordinate",
             "header": "Longitude",
             "subfieldPath": [
                 {

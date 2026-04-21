@@ -477,8 +477,8 @@
         "customSchedule": {
             "timeZone": "America/New_York",
             "startDate": "2025-01-01",
-            "startTime": "03:00:00",
-            "frequencyType": "DAILY"
+            "startTime": "00:00:00",
+            "frequencyType": "EVERY_5_MINUTES"
         },
         "runMode": "DEFAULT"
     }

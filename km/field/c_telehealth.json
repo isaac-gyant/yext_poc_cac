@@ -1,0 +1,12 @@
+{
+    "$id": "c_telehealth",
+    "$schema": "https://schema.yext.com/config/km/field/v1",
+    "displayName": "Telehealth Available",
+    "description": "Whether telehealth services are available at this location",
+    "group": "NONE",
+    "localization": "PRIMARY_ONLY",
+    "typeId": "boolean",
+    "type": {
+        "booleanType": {}
+    }
+}

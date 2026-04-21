@@ -1,0 +1,14 @@
+{
+    "$id": "c_publicTransit",
+    "$schema": "https://schema.yext.com/config/km/field/v1",
+    "displayName": "Public Transit",
+    "description": "Public transit access information",
+    "group": "NONE",
+    "localization": "PRIMARY_ONLY",
+    "typeId": "string",
+    "type": {
+        "stringType": {
+            "stereotype": "MULTILINE"
+        }
+    }
+}

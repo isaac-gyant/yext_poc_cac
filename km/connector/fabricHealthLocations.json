@@ -1,0 +1,485 @@
+{
+    "$id": "fabricHealthLocations",
+    "$schema": "https://schema.yext.com/config/km/connector/v7",
+    "displayName": "Fabric Health - Locations Connector",
+    "source": {
+        "sourceConfig": {
+            "apiPullConfig": {
+                "requestType": "GET",
+                "url": "https://fabric.isaacnewton.dev/api/locations?pageSize=20",
+                "dataFormat": "JSON",
+                "authentication": {
+                    "apiKey": {
+                        "key": "x-api-key",
+                        "value": "${{fabricHealthApiKey}}",
+                        "setAsHeader": true
+                    }
+                },
+                "paginationControl": {
+                    "cursorPagination": {
+                        "pageKey": "pageToken",
+                        "cursor": "pagination.pageToken",
+                        "cursorType": "TOKEN"
+                    }
+                }
+            }
+        },
+        "baseSelector": {
+            "type": "JSON",
+            "header": "Entity Container",
+            "path": "data"
+        },
+        "selectors": [
+            {
+                "type": "JSON",
+                "header": "Entity ID",
+                "path": "id"
+            },
+            {
+                "type": "JSON",
+                "header": "Name",
+                "path": "name"
+            },
+            {
+                "type": "JSON",
+                "header": "Location Type",
+                "path": "locationType"
+            },
+            {
+                "type": "JSON",
+                "header": "Address Line1",
+                "path": "address.line1"
+            },
+            {
+                "type": "JSON",
+                "header": "Address Line2",
+                "path": "address.line2"
+            },
+            {
+                "type": "JSON",
+                "header": "Address City",
+                "path": "address.city"
+            },
+            {
+                "type": "JSON",
+                "header": "Address State",
+                "path": "address.state"
+            },
+            {
+                "type": "JSON",
+                "header": "Address Zip",
+                "path": "address.zip"
+            },
+            {
+                "type": "JSON",
+                "header": "Address Country",
+                "path": "address.country"
+            },
+            {
+                "type": "JSON",
+                "header": "Latitude",
+                "path": "geocode.latitude"
+            },
+            {
+                "type": "JSON",
+                "header": "Longitude",
+                "path": "geocode.longitude"
+            },
+            {
+                "type": "JSON",
+                "header": "Phone",
+                "path": "phone"
+            },
+            {
+                "type": "JSON",
+                "header": "Fax",
+                "path": "fax"
+            },
+            {
+                "type": "JSON",
+                "header": "Hours Monday",
+                "path": "hours.monday"
+            },
+            {
+                "type": "JSON",
+                "header": "Hours Tuesday",
+                "path": "hours.tuesday"
+            },
+            {
+                "type": "JSON",
+                "header": "Hours Wednesday",
+                "path": "hours.wednesday"
+            },
+            {
+                "type": "JSON",
+                "header": "Hours Thursday",
+                "path": "hours.thursday"
+            },
+            {
+                "type": "JSON",
+                "header": "Hours Friday",
+                "path": "hours.friday"
+            },
+            {
+                "type": "JSON",
+                "header": "Hours Saturday",
+                "path": "hours.saturday"
+            },
+            {
+                "type": "JSON",
+                "header": "Hours Sunday",
+                "path": "hours.sunday"
+            },
+            {
+                "type": "JSON",
+                "header": "Website",
+                "path": "website"
+            },
+            {
+                "type": "JSON",
+                "header": "Description",
+                "path": "description"
+            },
+            {
+                "type": "JSON",
+                "header": "Provider IDs",
+                "path": "providerIds"
+            },
+            {
+                "type": "JSON",
+                "header": "Departments",
+                "path": "departments"
+            },
+            {
+                "type": "JSON",
+                "header": "Parking Info",
+                "path": "parkingInfo"
+            },
+            {
+                "type": "JSON",
+                "header": "Public Transit",
+                "path": "publicTransit"
+            },
+            {
+                "type": "JSON",
+                "header": "Accessibility",
+                "path": "accessibility"
+            },
+            {
+                "type": "JSON",
+                "header": "Photo URL",
+                "path": "photoUrl"
+            }
+        ]
+    },
+    "destinationConfig": {
+        "knowledgeGraphConfig": {
+            "entityTypes": [
+                "ce_healthcareLocation"
+            ]
+        }
+    },
+    "mappings": [
+        {
+            "clearValueIfBlank": false,
+            "dropInvalidMapping": false,
+            "field": "entityId",
+            "header": "Entity ID",
+            "subfieldPath": []
+        },
+        {
+            "clearValueIfBlank": false,
+            "dropInvalidMapping": false,
+            "field": "name",
+            "header": "Name",
+            "subfieldPath": []
+        },
+        {
+            "clearValueIfBlank": false,
+            "dropInvalidMapping": false,
+            "field": "c_locationType",
+            "header": "Location Type",
+            "subfieldPath": []
+        },
+        {
+            "clearValueIfBlank": false,
+            "dropInvalidMapping": false,
+            "field": "address",
+            "header": "Address Line1",
+            "subfieldPath": [
+                {
+                    "name": "line1"
+                }
+            ]
+        },
+        {
+            "clearValueIfBlank": false,
+            "dropInvalidMapping": false,
+            "field": "address",
+            "header": "Address Line2",
+            "subfieldPath": [
+                {
+                    "name": "line2"
+                }
+            ]
+        },
+        {
+            "clearValueIfBlank": false,
+            "dropInvalidMapping": false,
+            "field": "address",
+            "header": "Address City",
+            "subfieldPath": [
+                {
+                    "name": "city"
+                }
+            ]
+        },
+        {
+            "clearValueIfBlank": false,
+            "dropInvalidMapping": false,
+            "field": "address",
+            "header": "Address State",
+            "subfieldPath": [
+                {
+                    "name": "region"
+                }
+            ]
+        },
+        {
+            "clearValueIfBlank": false,
+            "dropInvalidMapping": false,
+            "field": "address",
+            "header": "Address Zip",
+            "subfieldPath": [
+                {
+                    "name": "postalCode"
+                }
+            ]
+        },
+        {
+            "clearValueIfBlank": false,
+            "dropInvalidMapping": false,
+            "field": "address",
+            "header": "Address Country",
+            "subfieldPath": [
+                {
+                    "name": "countryCode"
+                }
+            ]
+        },
+        {
+            "clearValueIfBlank": false,
+            "dropInvalidMapping": false,
+            "field": "geocodedCoordinate",
+            "header": "Latitude",
+            "subfieldPath": [
+                {
+                    "name": "latitude"
+                }
+            ]
+        },
+        {
+            "clearValueIfBlank": false,
+            "dropInvalidMapping": false,
+            "field": "geocodedCoordinate",
+            "header": "Longitude",
+            "subfieldPath": [
+                {
+                    "name": "longitude"
+                }
+            ]
+        },
+        {
+            "clearValueIfBlank": false,
+            "dropInvalidMapping": false,
+            "field": "mainPhone",
+            "header": "Phone",
+            "subfieldPath": []
+        },
+        {
+            "clearValueIfBlank": false,
+            "dropInvalidMapping": false,
+            "field": "fax",
+            "header": "Fax",
+            "subfieldPath": []
+        },
+        {
+            "clearValueIfBlank": false,
+            "dropInvalidMapping": false,
+            "field": "hours",
+            "header": "Hours Monday",
+            "subfieldPath": [
+                {
+                    "fieldFormatConfig": {
+                        "fieldDataFormat": "HOURS_INTERVAL_FORMAT"
+                    },
+                    "name": "monday"
+                }
+            ]
+        },
+        {
+            "clearValueIfBlank": false,
+            "dropInvalidMapping": false,
+            "field": "hours",
+            "header": "Hours Tuesday",
+            "subfieldPath": [
+                {
+                    "fieldFormatConfig": {
+                        "fieldDataFormat": "HOURS_INTERVAL_FORMAT"
+                    },
+                    "name": "tuesday"
+                }
+            ]
+        },
+        {
+            "clearValueIfBlank": false,
+            "dropInvalidMapping": false,
+            "field": "hours",
+            "header": "Hours Wednesday",
+            "subfieldPath": [
+                {
+                    "fieldFormatConfig": {
+                        "fieldDataFormat": "HOURS_INTERVAL_FORMAT"
+                    },
+                    "name": "wednesday"
+                }
+            ]
+        },
+        {
+            "clearValueIfBlank": false,
+            "dropInvalidMapping": false,
+            "field": "hours",
+            "header": "Hours Thursday",
+            "subfieldPath": [
+                {
+                    "fieldFormatConfig": {
+                        "fieldDataFormat": "HOURS_INTERVAL_FORMAT"
+                    },
+                    "name": "thursday"
+                }
+            ]
+        },
+        {
+            "clearValueIfBlank": false,
+            "dropInvalidMapping": false,
+            "field": "hours",
+            "header": "Hours Friday",
+            "subfieldPath": [
+                {
+                    "fieldFormatConfig": {
+                        "fieldDataFormat": "HOURS_INTERVAL_FORMAT"
+                    },
+                    "name": "friday"
+                }
+            ]
+        },
+        {
+            "clearValueIfBlank": false,
+            "dropInvalidMapping": false,
+            "field": "hours",
+            "header": "Hours Saturday",
+            "subfieldPath": [
+                {
+                    "fieldFormatConfig": {
+                        "fieldDataFormat": "HOURS_INTERVAL_FORMAT"
+                    },
+                    "name": "saturday"
+                }
+            ]
+        },
+        {
+            "clearValueIfBlank": false,
+            "dropInvalidMapping": false,
+            "field": "hours",
+            "header": "Hours Sunday",
+            "subfieldPath": [
+                {
+                    "fieldFormatConfig": {
+                        "fieldDataFormat": "HOURS_INTERVAL_FORMAT"
+                    },
+                    "name": "sunday"
+                }
+            ]
+        },
+        {
+            "clearValueIfBlank": false,
+            "dropInvalidMapping": false,
+            "field": "websiteUrl",
+            "header": "Website",
+            "subfieldPath": [
+                {
+                    "name": "url"
+                }
+            ]
+        },
+        {
+            "clearValueIfBlank": false,
+            "dropInvalidMapping": false,
+            "field": "description",
+            "header": "Description",
+            "subfieldPath": []
+        },
+        {
+            "clearValueIfBlank": false,
+            "dropInvalidMapping": false,
+            "field": "c_providerIds",
+            "header": "Provider IDs",
+            "subfieldPath": []
+        },
+        {
+            "clearValueIfBlank": false,
+            "dropInvalidMapping": false,
+            "field": "c_departments",
+            "header": "Departments",
+            "subfieldPath": []
+        },
+        {
+            "clearValueIfBlank": false,
+            "dropInvalidMapping": false,
+            "field": "c_parkingInfo",
+            "header": "Parking Info",
+            "subfieldPath": []
+        },
+        {
+            "clearValueIfBlank": false,
+            "dropInvalidMapping": false,
+            "field": "c_publicTransit",
+            "header": "Public Transit",
+            "subfieldPath": []
+        },
+        {
+            "clearValueIfBlank": false,
+            "dropInvalidMapping": false,
+            "field": "c_accessibility",
+            "header": "Accessibility",
+            "subfieldPath": []
+        },
+        {
+            "clearValueIfBlank": false,
+            "dropInvalidMapping": false,
+            "field": "photoGallery",
+            "header": "Photo URL",
+            "subfieldPath": [
+                {
+                    "name": "image"
+                },
+                {
+                    "name": "url"
+                }
+            ]
+        }
+    ],
+    "comprehensiveModeConfig": {
+        "comprehensiveSet": "ENTITIES_CREATED_BY_THIS_CONNECTOR",
+        "actionOnMissingEntities": "DELETE"
+    },
+    "scheduleConfig": {
+        "customSchedule": {
+            "timeZone": "America/New_York",
+            "startDate": "2025-01-01",
+            "startTime": "03:00:00",
+            "frequencyType": "DAILY"
+        },
+        "runMode": "DEFAULT"
+    }
+}

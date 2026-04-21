@@ -1,0 +1,12 @@
+{
+    "$id": "c_ratingsCount",
+    "$schema": "https://schema.yext.com/config/km/field/v1",
+    "displayName": "Ratings Count",
+    "description": "Total number of patient ratings",
+    "group": "NONE",
+    "localization": "PRIMARY_ONLY",
+    "typeId": "decimal",
+    "type": {
+        "decimalType": {}
+    }
+}

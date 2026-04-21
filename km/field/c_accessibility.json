@@ -1,0 +1,14 @@
+{
+    "$id": "c_accessibility",
+    "$schema": "https://schema.yext.com/config/km/field/v1",
+    "displayName": "Accessibility",
+    "description": "Accessibility information and accommodations",
+    "group": "NONE",
+    "localization": "PRIMARY_ONLY",
+    "typeId": "string",
+    "type": {
+        "stringType": {
+            "stereotype": "MULTILINE"
+        }
+    }
+}

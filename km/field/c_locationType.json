@@ -1,0 +1,14 @@
+{
+    "$id": "c_locationType",
+    "$schema": "https://schema.yext.com/config/km/field/v1",
+    "displayName": "Location Type",
+    "description": "Type of healthcare location (clinic, hospital, urgent care, etc.)",
+    "group": "NONE",
+    "localization": "PRIMARY_ONLY",
+    "typeId": "string",
+    "type": {
+        "stringType": {
+            "stereotype": "SIMPLE"
+        }
+    }
+}

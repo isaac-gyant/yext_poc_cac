@@ -1,0 +1,12 @@
+{
+    "$id": "c_acceptingNewPatients",
+    "$schema": "https://schema.yext.com/config/km/field/v1",
+    "displayName": "Accepting New Patients",
+    "description": "Whether the provider or location is accepting new patients",
+    "group": "NONE",
+    "localization": "PRIMARY_ONLY",
+    "typeId": "boolean",
+    "type": {
+        "booleanType": {}
+    }
+}

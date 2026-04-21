@@ -1,0 +1,19 @@
+{
+    "$id": "c_departments",
+    "$schema": "https://schema.yext.com/config/km/field/v1",
+    "displayName": "Departments",
+    "description": "Departments available at this location",
+    "group": "NONE",
+    "localization": "PRIMARY_ONLY",
+    "typeId": "list",
+    "type": {
+        "listType": {
+            "typeId": "string",
+            "type": {
+                "stringType": {
+                    "stereotype": "SIMPLE"
+                }
+            }
+        }
+    }
+}

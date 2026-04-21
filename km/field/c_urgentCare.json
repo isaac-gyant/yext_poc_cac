@@ -1,0 +1,12 @@
+{
+    "$id": "c_urgentCare",
+    "$schema": "https://schema.yext.com/config/km/field/v1",
+    "displayName": "Urgent Care",
+    "description": "Whether urgent care is available at this location",
+    "group": "NONE",
+    "localization": "PRIMARY_ONLY",
+    "typeId": "boolean",
+    "type": {
+        "booleanType": {}
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "$id": "c_parkingType",
+    "$schema": "https://schema.yext.com/config/km/field/v1",
+    "displayName": "Parking Type",
+    "description": "Type of parking available at this location",
+    "group": "NONE",
+    "localization": "PRIMARY_ONLY",
+    "typeId": "string",
+    "type": {
+        "stringType": {
+            "stereotype": "SIMPLE",
+            "maxLength": 100
+        }
+    }
+}

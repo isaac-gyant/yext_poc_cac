@@ -1,0 +1,313 @@
+{
+    "$id": "fabricHealthProviders",
+    "$schema": "https://schema.yext.com/config/km/connector/v7",
+    "displayName": "Fabric Health - Providers Connector",
+    "source": {
+        "sourceConfig": {
+            "apiPullConfig": {
+                "requestType": "GET",
+                "url": "https://fabric.isaacnewton.dev/api/providers?pageSize=20",
+                "dataFormat": "JSON",
+                "authentication": {
+                    "apiKey": {
+                        "key": "x-api-key",
+                        "value": "${{fabricHealthApiKey}}",
+                        "setAsHeader": true
+                    }
+                },
+                "paginationControl": {
+                    "cursorPagination": {
+                        "pageKey": "pageToken",
+                        "cursor": "pagination.pageToken",
+                        "cursorType": "TOKEN"
+                    }
+                }
+            }
+        },
+        "baseSelector": {
+            "type": "JSON",
+            "header": "Entity Container",
+            "path": "data"
+        },
+        "selectors": [
+            {
+                "type": "JSON",
+                "header": "Entity ID",
+                "path": "id"
+            },
+            {
+                "type": "JSON",
+                "header": "Name",
+                "path": "displayName"
+            },
+            {
+                "type": "JSON",
+                "header": "NPI",
+                "path": "npi"
+            },
+            {
+                "type": "JSON",
+                "header": "First Name",
+                "path": "firstName"
+            },
+            {
+                "type": "JSON",
+                "header": "Last Name",
+                "path": "lastName"
+            },
+            {
+                "type": "JSON",
+                "header": "Display Name",
+                "path": "displayName"
+            },
+            {
+                "type": "JSON",
+                "header": "Gender",
+                "path": "gender"
+            },
+            {
+                "type": "JSON",
+                "header": "Specialty",
+                "path": "specialty"
+            },
+            {
+                "type": "JSON",
+                "header": "Subspecialty",
+                "path": "subspecialty"
+            },
+            {
+                "type": "JSON",
+                "header": "Credentials",
+                "path": "credentials"
+            },
+            {
+                "type": "JSON",
+                "header": "Accepting New Patients",
+                "path": "acceptingNewPatients"
+            },
+            {
+                "type": "JSON",
+                "header": "Languages",
+                "path": "languages"
+            },
+            {
+                "type": "JSON",
+                "header": "Bio",
+                "path": "bio"
+            },
+            {
+                "type": "JSON",
+                "header": "Headshot URL",
+                "path": "headshotUrl"
+            },
+            {
+                "type": "JSON",
+                "header": "Location IDs",
+                "path": "locationIds"
+            },
+            {
+                "type": "JSON",
+                "header": "Phone",
+                "path": "phone"
+            },
+            {
+                "type": "JSON",
+                "header": "Fax",
+                "path": "fax"
+            },
+            {
+                "type": "JSON",
+                "header": "Email",
+                "path": "email"
+            },
+            {
+                "type": "JSON",
+                "header": "Insurances Accepted",
+                "path": "insurancesAccepted"
+            },
+            {
+                "type": "JSON",
+                "header": "Ratings Average",
+                "path": "ratingsAverage"
+            },
+            {
+                "type": "JSON",
+                "header": "Ratings Count",
+                "path": "ratingsCount"
+            }
+        ]
+    },
+    "destinationConfig": {
+        "knowledgeGraphConfig": {
+            "entityTypes": [
+                "ce_healthcareProvider"
+            ]
+        }
+    },
+    "mappings": [
+        {
+            "clearValueIfBlank": false,
+            "dropInvalidMapping": false,
+            "field": "entityId",
+            "header": "Entity ID",
+            "subfieldPath": []
+        },
+        {
+            "clearValueIfBlank": false,
+            "dropInvalidMapping": false,
+            "field": "name",
+            "header": "Name",
+            "subfieldPath": []
+        },
+        {
+            "clearValueIfBlank": false,
+            "dropInvalidMapping": false,
+            "field": "c_npi",
+            "header": "NPI",
+            "subfieldPath": []
+        },
+        {
+            "clearValueIfBlank": false,
+            "dropInvalidMapping": false,
+            "field": "firstName",
+            "header": "First Name",
+            "subfieldPath": []
+        },
+        {
+            "clearValueIfBlank": false,
+            "dropInvalidMapping": false,
+            "field": "lastName",
+            "header": "Last Name",
+            "subfieldPath": []
+        },
+        {
+            "clearValueIfBlank": false,
+            "dropInvalidMapping": false,
+            "field": "c_displayName",
+            "header": "Display Name",
+            "subfieldPath": []
+        },
+        {
+            "clearValueIfBlank": false,
+            "dropInvalidMapping": false,
+            "field": "gender",
+            "header": "Gender",
+            "subfieldPath": []
+        },
+        {
+            "clearValueIfBlank": false,
+            "dropInvalidMapping": false,
+            "field": "c_specialty",
+            "header": "Specialty",
+            "subfieldPath": []
+        },
+        {
+            "clearValueIfBlank": false,
+            "dropInvalidMapping": false,
+            "field": "c_subspecialty",
+            "header": "Subspecialty",
+            "subfieldPath": []
+        },
+        {
+            "clearValueIfBlank": false,
+            "dropInvalidMapping": false,
+            "field": "c_credentials",
+            "header": "Credentials",
+            "subfieldPath": []
+        },
+        {
+            "clearValueIfBlank": false,
+            "dropInvalidMapping": false,
+            "field": "c_acceptingNewPatients",
+            "header": "Accepting New Patients",
+            "subfieldPath": []
+        },
+        {
+            "clearValueIfBlank": false,
+            "dropInvalidMapping": false,
+            "field": "c_languages",
+            "header": "Languages",
+            "subfieldPath": []
+        },
+        {
+            "clearValueIfBlank": false,
+            "dropInvalidMapping": false,
+            "field": "description",
+            "header": "Bio",
+            "subfieldPath": []
+        },
+        {
+            "clearValueIfBlank": false,
+            "dropInvalidMapping": false,
+            "field": "headshot",
+            "header": "Headshot URL",
+            "subfieldPath": [
+                {
+                    "name": "url"
+                }
+            ]
+        },
+        {
+            "clearValueIfBlank": false,
+            "dropInvalidMapping": false,
+            "field": "c_locationIds",
+            "header": "Location IDs",
+            "subfieldPath": []
+        },
+        {
+            "clearValueIfBlank": false,
+            "dropInvalidMapping": false,
+            "field": "mainPhone",
+            "header": "Phone",
+            "subfieldPath": []
+        },
+        {
+            "clearValueIfBlank": false,
+            "dropInvalidMapping": false,
+            "field": "fax",
+            "header": "Fax",
+            "subfieldPath": []
+        },
+        {
+            "clearValueIfBlank": false,
+            "dropInvalidMapping": false,
+            "field": "emails",
+            "header": "Email",
+            "subfieldPath": []
+        },
+        {
+            "clearValueIfBlank": false,
+            "dropInvalidMapping": false,
+            "field": "c_insurancesAccepted",
+            "header": "Insurances Accepted",
+            "subfieldPath": []
+        },
+        {
+            "clearValueIfBlank": false,
+            "dropInvalidMapping": false,
+            "field": "c_ratingsAverage",
+            "header": "Ratings Average",
+            "subfieldPath": []
+        },
+        {
+            "clearValueIfBlank": false,
+            "dropInvalidMapping": false,
+            "field": "c_ratingsCount",
+            "header": "Ratings Count",
+            "subfieldPath": []
+        }
+    ],
+    "comprehensiveModeConfig": {
+        "comprehensiveSet": "ENTITIES_CREATED_BY_THIS_CONNECTOR",
+        "actionOnMissingEntities": "DELETE"
+    },
+    "scheduleConfig": {
+        "customSchedule": {
+            "timeZone": "America/New_York",
+            "startDate": "2025-01-01",
+            "startTime": "02:00:00",
+            "frequencyType": "DAILY"
+        },
+        "runMode": "DEFAULT"
+    }
+}

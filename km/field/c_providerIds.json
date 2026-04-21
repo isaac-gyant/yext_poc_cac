@@ -1,0 +1,19 @@
+{
+    "$id": "c_providerIds",
+    "$schema": "https://schema.yext.com/config/km/field/v1",
+    "displayName": "Provider IDs",
+    "description": "IDs of providers associated with this location",
+    "group": "NONE",
+    "localization": "PRIMARY_ONLY",
+    "typeId": "list",
+    "type": {
+        "listType": {
+            "typeId": "string",
+            "type": {
+                "stringType": {
+                    "stereotype": "SIMPLE"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "$id": "c_displayName",
+    "$schema": "https://schema.yext.com/config/km/field/v1",
+    "displayName": "Display Name",
+    "description": "Formatted display name (e.g. Dr. Jane Smith)",
+    "group": "NONE",
+    "localization": "PRIMARY_ONLY",
+    "typeId": "string",
+    "type": {
+        "stringType": {
+            "stereotype": "SIMPLE",
+            "maxLength": 200
+        }
+    }
+}

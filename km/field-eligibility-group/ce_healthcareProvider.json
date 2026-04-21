@@ -1,0 +1,29 @@
+{
+    "$id": "ce_healthcareProvider",
+    "$schema": "https://schema.yext.com/config/km/field-eligibility-group/v1",
+    "name": "Healthcare Provider Fields",
+    "entityType": "ce_healthcareProvider",
+    "fields": [
+        "entityId",
+        "name",
+        "firstName",
+        "lastName",
+        "gender",
+        "description",
+        "headshot",
+        "mainPhone",
+        "fax",
+        "emails",
+        "c_npi",
+        "c_displayName",
+        "c_specialty",
+        "c_subspecialty",
+        "c_credentials",
+        "c_acceptingNewPatients",
+        "c_languages",
+        "c_locationIds",
+        "c_insurancesAccepted",
+        "c_ratingsAverage",
+        "c_ratingsCount"
+    ]
+}

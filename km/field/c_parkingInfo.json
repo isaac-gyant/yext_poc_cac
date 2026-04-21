@@ -1,0 +1,14 @@
+{
+    "$id": "c_parkingInfo",
+    "$schema": "https://schema.yext.com/config/km/field/v1",
+    "displayName": "Parking Info",
+    "description": "Parking information and instructions",
+    "group": "NONE",
+    "localization": "PRIMARY_ONLY",
+    "typeId": "string",
+    "type": {
+        "stringType": {
+            "stereotype": "MULTILINE"
+        }
+    }
+}

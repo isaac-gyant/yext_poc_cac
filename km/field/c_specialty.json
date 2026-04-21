@@ -1,0 +1,15 @@
+{
+    "$id": "c_specialty",
+    "$schema": "https://schema.yext.com/config/km/field/v1",
+    "displayName": "Specialty",
+    "description": "Primary medical specialty",
+    "group": "NONE",
+    "localization": "PRIMARY_ONLY",
+    "typeId": "string",
+    "type": {
+        "stringType": {
+            "stereotype": "SIMPLE",
+            "maxLength": 200
+        }
+    }
+}

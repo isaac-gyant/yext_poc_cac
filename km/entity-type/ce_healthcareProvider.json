@@ -1,0 +1,7 @@
+{
+    "$id": "ce_healthcareProvider",
+    "$schema": "https://schema.yext.com/config/km/entity-type/v2",
+    "displayName": "Healthcare Provider",
+    "description": "A healthcare provider (doctor, specialist, etc.) synced from the Fabric Health API",
+    "pluralDisplayName": "Healthcare Providers"
+}

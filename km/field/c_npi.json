@@ -1,0 +1,14 @@
+{
+    "$id": "c_npi",
+    "$schema": "https://schema.yext.com/config/km/field/v1",
+    "displayName": "NPI",
+    "description": "National Provider Identifier number",
+    "group": "NONE",
+    "localization": "PRIMARY_ONLY",
+    "typeId": "string",
+    "type": {
+        "stringType": {
+            "stereotype": "SIMPLE"
+        }
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "$id": "ce_healthcareLocation",
+    "$schema": "https://schema.yext.com/config/km/entity-type/v2",
+    "displayName": "Healthcare Location",
+    "description": "A healthcare facility / clinic location synced from the Fabric Health API",
+    "pluralDisplayName": "Healthcare Locations"
+}

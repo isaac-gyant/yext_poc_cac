@@ -1,0 +1,20 @@
+{
+    "$id": "c_accessibilityFeatures",
+    "$schema": "https://schema.yext.com/config/km/field/v1",
+    "displayName": "Accessibility Features",
+    "description": "ADA and accessibility features at this location",
+    "group": "NONE",
+    "localization": "PRIMARY_ONLY",
+    "typeId": "list",
+    "type": {
+        "listType": {
+            "typeId": "string",
+            "type": {
+                "stringType": {
+                    "stereotype": "SIMPLE",
+                    "maxLength": 100
+                }
+            }
+        }
+    }
+}

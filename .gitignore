@@ -1,0 +1,12 @@
+# Yext CLI local state
+.yext/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo

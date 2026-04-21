@@ -1,0 +1,20 @@
+{
+    "$id": "c_insurancesAccepted",
+    "$schema": "https://schema.yext.com/config/km/field/v1",
+    "displayName": "Insurances Accepted",
+    "description": "List of insurance plans accepted by this provider",
+    "group": "NONE",
+    "localization": "PRIMARY_ONLY",
+    "typeId": "list",
+    "type": {
+        "listType": {
+            "typeId": "string",
+            "type": {
+                "stringType": {
+                    "stereotype": "SIMPLE",
+                    "maxLength": 100
+                }
+            }
+        }
+    }
+}

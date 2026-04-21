@@ -1,0 +1,20 @@
+{
+    "$id": "c_languages",
+    "$schema": "https://schema.yext.com/config/km/field/v1",
+    "displayName": "Languages Spoken",
+    "description": "Languages the provider can communicate in",
+    "group": "NONE",
+    "localization": "PRIMARY_ONLY",
+    "typeId": "list",
+    "type": {
+        "listType": {
+            "typeId": "string",
+            "type": {
+                "stringType": {
+                    "stereotype": "SIMPLE",
+                    "maxLength": 50
+                }
+            }
+        }
+    }
+}

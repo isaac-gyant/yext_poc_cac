@@ -1,0 +1,12 @@
+{
+    "$id": "c_ratingsAverage",
+    "$schema": "https://schema.yext.com/config/km/field/v1",
+    "displayName": "Ratings Average",
+    "description": "Average patient rating (1.0 - 5.0)",
+    "group": "NONE",
+    "localization": "PRIMARY_ONLY",
+    "typeId": "decimal",
+    "type": {
+        "decimalType": {}
+    }
+}

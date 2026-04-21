@@ -1,0 +1,15 @@
+{
+    "$id": "c_subspecialty",
+    "$schema": "https://schema.yext.com/config/km/field/v1",
+    "displayName": "Subspecialty",
+    "description": "Medical subspecialty, if any",
+    "group": "NONE",
+    "localization": "PRIMARY_ONLY",
+    "typeId": "string",
+    "type": {
+        "stringType": {
+            "stereotype": "SIMPLE",
+            "maxLength": 200
+        }
+    }
+}

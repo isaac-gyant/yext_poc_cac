@@ -1,0 +1,24 @@
+{
+    "$id": "ce_healthcareLocation",
+    "$schema": "https://schema.yext.com/config/km/field-eligibility-group/v1",
+    "name": "Healthcare Location Fields",
+    "entityType": "ce_healthcareLocation",
+    "fields": [
+        "entityId",
+        "name",
+        "address",
+        "geocodedCoordinate",
+        "mainPhone",
+        "fax",
+        "hours",
+        "websiteUrl",
+        "description",
+        "photoGallery",
+        "c_locationType",
+        "c_providerIds",
+        "c_departments",
+        "c_parkingInfo",
+        "c_publicTransit",
+        "c_accessibility"
+    ]
+}
